@@ -133,7 +133,7 @@ a{
 /* ========================== */
 /* HOME */
 /* ========================== */
-.home, .battle{
+.home, .battle, .notfound{
   padding:5rem 0;
   text-align: center;
   width: 100%;
@@ -143,17 +143,19 @@ a{
   justify-content: space-between;
 }
 .home-title, 
-.battle-title{
+.battle-title,
+.notfound-title{
   font-size: 3rem;
   margin:1rem auto;
   text-transform: capitalize;
   font-weight: 100;
 }
 .home-subtitle,
-.battle-subtitle{
+.battle-subtitle,
+.notfound-subtitle{
   font-size: 2rem;
   margin:1rem auto;
-  text-transform: capitalize;
+  letter-spacing: 2px;
   font-weight: 100;
 }
 
