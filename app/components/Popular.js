@@ -34,7 +34,7 @@ function SelectLanguage(props){
       {languages.map(function(lang){
         return(
           <li 
-            style = {lang === props.language ? {color:'#d0021b', borderBottom:'1px solid #d0021b'}: null}
+            style = {lang === props.language ? {color:'#d0021b', fontWeight:'500', borderBottom:'1px solid #d0021b'}: null}
             key={lang} 
             onClick={props.onSelect.bind(null, lang)}>
             {lang}

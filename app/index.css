@@ -23,6 +23,9 @@ body {
 a{
   text-decoration: none;
 }
+a:focus, button:focus{
+  outline: none;
+}
 .container {
   max-width: 120rem;
   margin:0 auto;
@@ -39,7 +42,8 @@ a{
 
 .languages li {
   font-size:1.5rem;
-  font-weight: bold;
+  font-weight: 200;
+  letter-spacing: 1px;
   cursor: pointer;
 }
 
@@ -119,16 +123,19 @@ a{
 }
 
 .nav-item a{
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: orangered;
   text-decoration:none;
   margin: 0 2rem 0 0;
+  font-weight: 200;
 }
 
-.active{
-  font-weight: bold;
+a.active{
+  font-weight: 400;
   border-bottom: 1px solid orangered;
 }
+
+
 
 /* ========================== */
 /* HOME */
@@ -148,7 +155,7 @@ a{
   font-size: 3rem;
   margin:1rem auto;
   text-transform: capitalize;
-  font-weight: 100;
+  font-weight: 200;
 }
 .home-subtitle,
 .battle-subtitle,
@@ -156,7 +163,7 @@ a{
   font-size: 2rem;
   margin:1rem auto;
   letter-spacing: 2px;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .btn {
@@ -164,14 +171,14 @@ a{
   border-radius: 3.5rem;
   color: white;
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 200;
   margin: 3rem auto;
   padding: 1rem 2rem;
   transition: all 0.3s;
   width: 35%;
 }
 .btn-arrow{
-  font-weight: 100;
+  font-weight: 200;
   font-family: Arial;
 }
 
@@ -179,5 +186,50 @@ a{
   background-image: linear-gradient(orangered, red);
 }
 .btn:active{
-  transform: translateY(-2rem);
+  transform: translateY(.5rem);
+}
+
+
+/* ========================== */
+/* ROW and COLUMN */
+/* ========================== */
+
+.row{
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50rem;
+}
+
+.column input[type="text"] {
+  border: 1px solid rgba(0,0,0,0.43);
+  border-radius: 4px;
+  margin-top: 2rem;
+  padding: 1rem;
+  width:80%;
+}
+
+.column input[placeholder]{
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+.header{
+  font-size: 3rem;
+  font-weight:200;
+  letter-spacing: 2px;
+}
+
+.btn--form {
+  margin: 1rem auto;
+  width: 50%;
+}
+.btn--form[disabled]{
+  background-color: rgb(136, 136, 135);
 }
