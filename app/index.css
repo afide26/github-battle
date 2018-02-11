@@ -205,6 +205,7 @@ a.active{
   flex-direction: column;
   align-items: center;
   width: 50rem;
+  margin: 3rem auto;
 }
 
 .column input[type="text"] {
@@ -228,6 +229,12 @@ a.active{
   display:block; 
 }
 
+.column-score{
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 1rem auto;
+}
 .header{
   font-size: 3rem;
   font-weight:200;
@@ -257,4 +264,23 @@ a.active{
   padding: .5rem 1rem;
   transition: all 0.3s;
   width: 25%;
+}
+
+
+/* ========================== */
+/* PROFILE-ITEMS DETAILS */
+/* ========================== */
+
+.profile-items{
+  list-style: none;
+}
+
+.profile-items li {
+  font-size: 1.5rem;
+  margin: 1rem auto;
+}
+
+.profile-items li:first-of-type {
+  color: orangered;
+  font-weight: 700;
 }

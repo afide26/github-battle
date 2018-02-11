@@ -4,32 +4,7 @@ var Link = require('react-router-dom').Link;
 var PropTypes = require('prop-types');
 var Link = require('react-router-dom').Link;
 
-function PlayerPreview(props){
-  return(
-    <div>
-      <div className="column">
-        <img 
-          className="avatar"
-          alt={"Avatar for " + props.username}
-          src={props.avatar}
-          />
-          <h2 className="username">@{props.username}</h2>
-          <button 
-            className="btn btn--form btn-reset"
-            onClick={props.onReset.bind(null, props.id)}>
-            Reset
-          </button>
-      </div>
-    </div>
-  )
-}
-
-PlayerPreview.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  username: PropTypes.string.isRequired,
-  onReset: PropTypes.func.isRequired,
-  id: PropTypes.string.isRequired
-}
+var PlayerPreview = require('./PlayerPreview');
 
 class PlayerInput extends React.Component {
   constructor(props){
@@ -141,9 +116,14 @@ class Battle extends Component {
           {playerOneImage !== null &&
             <PlayerPreview
              avatar={playerOneImage}
-             id='playerOne'
-             username={playerOneName}
-             onReset={this.handleReset}/>}
+             username={playerOneName}>
+              <button 
+                className="btn btn--form btn-reset"
+                onClick={this.handleReset.bind(null, 'playerOne')}>
+                Reset
+              </button>
+             </PlayerPreview>
+          }
 
           {!playerTwoName &&
           <PlayerInput
@@ -155,9 +135,13 @@ class Battle extends Component {
            { playerTwoImage !== null &&
             <PlayerPreview
              avatar={playerTwoImage}
-             id='playerTwo'
-             username={playerTwoName}
-             onReset={this.handleReset}/>}
+             username={playerTwoName}>
+              <button 
+                className="btn btn--form btn-reset"
+                onClick={this.handleReset.bind(null, 'playerTwo')}>
+                Reset
+              </button>
+             </PlayerPreview>}
         </div>
         {playerOneImage && playerTwoImage &&
         <Link 
