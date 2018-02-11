@@ -1,6 +1,7 @@
 var React = require('react');
 var Home = require('./Home');
 var Battle = require('./Battle');
+var Results = require('./results');
 var Nav = require('./Nav');
 var NotFound = require('./NotFound');
 var ReactRouter = require('react-router-dom');
@@ -21,6 +22,7 @@ class App extends React.Component {
           <Switch>
             <Route path="/" exact component={Home}/>
             <Route path="/battle" exact component={Battle}/>
+            <Route path="/battle/results" component={Results}/>
             <Route path="/popular" component={Popular}/>
             <Route component={NotFound}/>
           </Switch>

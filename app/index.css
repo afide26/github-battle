@@ -220,6 +220,14 @@ a.active{
   font-size: 2rem;
 }
 
+.column .avatar{
+  width: 14rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  display:block; 
+}
+
 .header{
   font-size: 3rem;
   font-weight:200;
@@ -230,6 +238,23 @@ a.active{
   margin: 1rem auto;
   width: 50%;
 }
+
+.battle-btn {
+  margin: 3rem auto;
+  width: 30%;
+}
 .btn--form[disabled]{
   background-color: rgb(136, 136, 135);
+}
+
+.btn-reset {
+  background-color: orangered;
+  border-radius: 3.5rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 200;
+  margin: 2rem auto;
+  padding: .5rem 1rem;
+  transition: all 0.3s;
+  width: 25%;
 }
